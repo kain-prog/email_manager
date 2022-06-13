@@ -28,7 +28,7 @@ Pessoa que contribuiu para este projeto:
   <tr>
     <td align="center">
       <a href="https://kain-prog.github.io/kain">
-        <img src="./assets/imgs/kain perfil 2 branco azul.jpeg" width="100px;" alt="Foto Kain"/><br>
+        <img src="./src/img/kain perfil 2 branco azul.jpeg" width="100px;" alt="Foto Kain"/><br>
         <sub>
           <b>Matheus Santos [Kain Developer]</b>
         </sub>
