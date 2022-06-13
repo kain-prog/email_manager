@@ -20,6 +20,17 @@ O projeto foi criado em:
 - [x] - NodeJs
 - [x] - Banco de dados [PostgreSQL]
 
+### Como Executar o Projeto:
+
+- Certifique-se de que você possua o SGBD PostgreSQL instalado em sua máquina.
+- Certifique-se de que você possua o NodeJS instalado em sua máquina.
+- Crie um banco de dados com o nome subscriptions ou o que você preferir, lembrando de modifcar os dados de conexão nas configurações do projeto.
+- Crie 2 tabelas:
+  [subscribers] = id, name, email, subscription_date, last_message, active.
+  [message_flow] = id, template_name, position.
+- Instale as dependências com yarn install ou npm install;
+- Execute o projeto com yarn start ou npm run start;
+
 ## 🤝 Colaboradores
 
 Pessoa que contribuiu para este projeto:
