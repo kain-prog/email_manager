@@ -1,0 +1,122 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Email menager",
+        "description": "Gerenciador de E-mails, ele cria um novo inscrito e atualiza as mensagens por dia de acordo com a posição da última mensagem",
+        "version": "1.0.0"
+    },
+    "basePath": "/",
+    "paths": {
+        "/subscriber": {
+            "get": {
+                "description": "Rota que busca todos os clientes inscritos",
+                "sumary": "Busca todos os clientes inscritos",
+                "tags": [
+                    "Subscribers"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "description": "Rota que inscreve um cliente",
+                "sumary": "Inscreve um cliente na base",
+                "tags": [
+                    "Subscribers"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    }
+                                },
+                                "example": {
+                                    "name": "João da Silva",
+                                    "email": "joao_silva@outlook.com"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Email existente"
+                    }
+                }
+            }
+        },
+        "/subscriber/active": {
+            "get": {
+                "description": "Rota que busca todos os clientes inscritos ativos",
+                "sumary": "Busca todos os clientes inscritos com status ativo verdadeiro",
+                "tags": [
+                    "Subscribers"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/message_flow": {
+            "get": {
+                "description": "Rota que busca todas as mensagens já inseridas",
+                "sumary": "Busca todas as mensagens inseridas",
+                "tags": [
+                    "Messages"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "description": "Rota que insere uma mensagem nova",
+                "sumary": "Insere uma mensagem nova na base",
+                "tags": [
+                    "Messages"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "template_name": {
+                                        "type": "string"
+                                    },
+                                    "position": {
+                                        "type": "number"
+                                    }
+                                },
+                                "example": {
+                                    "name": "Template de email",
+                                    "description": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    }
+}
