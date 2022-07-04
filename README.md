@@ -9,7 +9,7 @@ Projeto destinado ao desenvolvimento de uma API responsável por controlar os re
 - [x] - Rota de visualização de todos os templates.
 - [x] - Rota de visualização dos Inscritos que estão ativos [active].
 
-**IMPORTANT** - É possível testar todas as rotas por meio do localhost:3300/docs onde se encontra a página do SwaggerUI.
+**IMPORTANTE** - É possível testar todas as rotas por meio do localhost:3300/docs onde se encontra a página do SwaggerUI.
 
 <img src="./src/img/print-swagger.PNG" alt="Rotas Swagger" /> 
 
